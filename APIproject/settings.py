@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-r8x%#qfv=bkcnt@8f99j68#l0nzz7ps)o$pxpuu2j*021*pwgj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost', 'blog-python-react-django.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'blog-python-react-django.herokuapp.com']
 
 
 # Application definition

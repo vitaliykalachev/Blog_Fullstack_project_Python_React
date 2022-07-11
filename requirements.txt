@@ -67,9 +67,11 @@ distlib==0.3.4
 distributed @ file:///opt/concourse/worker/volumes/live/34c9adba-e95e-473d-7a32-ecdf958a8844/volume/distributed_1635968220957/work
 Django==4.0.3
 django-cors-headers==3.13.0
+django-cors-middleware==1.5.0
 djangorestframework==3.13.1
 docutils @ file:///opt/concourse/worker/volumes/live/c87e10af-317d-45cb-7142-3d02053858ee/volume/docutils_1620827978243/work
 entrypoints==0.3
+env==0.1.0
 et-xmlfile==1.1.0
 Faker==13.7.0
 fastcache @ file:///opt/concourse/worker/volumes/live/8356601f-d9bc-4d13-4017-1a58ebea6849/volume/fastcache_1607571270986/work
