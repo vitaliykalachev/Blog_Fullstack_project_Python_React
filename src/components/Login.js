@@ -17,10 +17,14 @@ function Login() {
         history('/articles', {replace: true})
     }
   }, [token])
-
+  
   const loginBtn = () => {
     APIService.LoginUser({username, password})
-    .then(resp => setToken('mytoken', resp.token))
+    .then(resp => {
+      if(resp.token) setToken('mytoken',resp.token)
+      else if(!resp.token) alert("You are not register. Please regitser first");
+    }
+      )
     .catch(error => console.log(error))
   }
   
@@ -53,9 +57,11 @@ function Login() {
             />
 
         </div>
-        {isLogin ? <button onClick = {loginBtn} className='btn btn-primary'  >Login</button>
+        {isLogin ? <button onClick = {loginBtn} className='btn btn-primary'> Login</button>
         : <button onClick = {registerBtn} className='btn btn-primary'>Register</button>}
 
+
+          
         <div className = 'mb-3' >
 
         <br/>
