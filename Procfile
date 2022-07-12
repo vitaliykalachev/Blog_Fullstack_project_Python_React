@@ -1,1 +1,1 @@
-web: gunicorn APIproject.wsgi && npm run-script start:prod
+web: gunicorn APIproject.wsgi
