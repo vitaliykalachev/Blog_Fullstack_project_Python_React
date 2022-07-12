@@ -1,0 +1,2 @@
+django: gunicorn path.to.wsgi:application
+node: node index.js

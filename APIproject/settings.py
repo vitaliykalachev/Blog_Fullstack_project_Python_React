@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-r8x%#qfv=bkcnt@8f99j68#l0nzz7ps)o$pxpuu2j*021*pwgj
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['localhost', 'blog-python-react-django.herokuapp.com']
+ALLOWED_HOSTS = [ 'blog-python-react-django.herokuapp.com', 'localhost']
 
 
 # Application definition
