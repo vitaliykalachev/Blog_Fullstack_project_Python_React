@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-r8x%#qfv=bkcnt@8f99j68#l0nzz7ps)o$pxpuu2j*021*pwgj
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['127.0.0.1','blog-python-react-django.herokuapp.com' ]
+ALLOWED_HOSTS = ['blog-python-react-django.herokuapp.com' ]
 
 
 # Application definition
@@ -138,7 +138,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'build/static')]
 STATIC_HOST = os.environ.get("DJANGO_STATIC_HOST", "")
-STATIC_URL = STATIC_HOST + "/static/"
+STATIC_URL = STATIC_HOST + "/staticfiles/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
