@@ -3,7 +3,7 @@
 export default class APIService {
     static updateArticle(article_id, body, token) {
 
-        return fetch(`/api/articles/${article_id}/`, {
+        return fetch(`http://127.0.0.1:8000/api/articles/${article_id}/`, {
             'method': 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ export default class APIService {
     }
 
     static insertArticle(body, token) {
-        return fetch ('/api/articles/', {
+        return fetch ('http://127.0.0.1:8000/api/articles/', {
             'method' : "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ export default class APIService {
 
     static deleteArticle(article_id, token){
 
-        return fetch(`/api/articles/${article_id}/`, {
+        return fetch(`http://127.0.0.1:8000/api/articles/${article_id}/`, {
             'method': 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ export default class APIService {
     }
 
     static LoginUser(body) {
-        return fetch ('/auth/', {
+        return fetch ('http://127.0.0.1:8000/auth/', {
             'method' : "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ export default class APIService {
     }
 
     static RegisterUser(body) {
-        return fetch ('/api/users/', {
+        return fetch ('http://127.0.0.1:8000/api/users/', {
             'method' : "POST",
             headers: {
                 'Content-Type': 'application/json',
