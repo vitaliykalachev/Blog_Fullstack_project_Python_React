@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-r8x%#qfv=bkcnt@8f99j68#l0nzz7ps)o$pxpuu2j*021*pwgj
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['127.0.0.1','blog-python-react-django.herokuapp.com' ]
+ALLOWED_HOSTS = ['blog-python-react-django.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -72,6 +72,7 @@ CORS_ALLOWED_ORIGINS = [
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
+    "https://blog-python-react-django.herokuapp.com",
     'http://localhost:8000',
     'http://localhost:8080',
 ]
