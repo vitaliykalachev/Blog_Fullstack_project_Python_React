@@ -15,7 +15,7 @@ function App() {
   let history = useNavigate();
 
   useEffect(() => {
-    fetch('/api/articles/', {
+    fetch('http://127.0.0.1:8000/api/articles/', {
       'method': 'GET',
       headers: {
         'Content-Type': 'application/json',
