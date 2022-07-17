@@ -9,8 +9,9 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-from django.conf import settings
 
+from django.conf import settings
+import django_heroku
 from pathlib import Path
 import os
 
@@ -49,6 +50,11 @@ INSTALLED_APPS = [
     
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
 
 
 
@@ -103,6 +109,17 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'APIproject.wsgi.application'
+
+SECURE_SSL_REDIRECT = True
+
+SESSION_COOKIE_SECURE=True
+
+CSRF_COOKIE_SECURE=True
+
+SECURE_HSTS_SECONDS = 31536000
+
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
 
 
 # Database
@@ -162,3 +179,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_heroku.settings(locals())
+
+try: 
+    from .local_settings import *
+except ImportError:
+    pass
