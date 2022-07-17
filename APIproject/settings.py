@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from django.conf import settings
-import django_heroku
+
 from pathlib import Path
 import os
 
@@ -180,9 +180,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
-try: 
-    from .local_settings import *
-except ImportError:
-    pass
+# try: 
+#     from .local_settings import *
+# except ImportError:
+#     pass
