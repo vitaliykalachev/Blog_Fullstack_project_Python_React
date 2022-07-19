@@ -98,7 +98,8 @@ DATABASES = {
     }
 }
 
-
+DATABASES['default'] = dj_database_url.config(conn_max_age=600,
+                                              ssl_require=True)
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -138,6 +139,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'build/static')]
 STATIC_HOST = os.environ.get("DJANGO_STATIC_HOST", "")
+
+# DJANGO_STATIC_HOST
+# https://d4663kmspf1sqa.cloudfront.net
+
 STATICFILES_DIRS = [BASE_DIR, "build"]
 
 # Default primary key field type
