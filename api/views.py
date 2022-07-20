@@ -4,6 +4,12 @@ from rest_framework import viewsets
 from rest_framework.authentication import  TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from django.contrib.auth.models import User
+from django.shortcuts import render
+
+
+
+
+
 
 class ArticleViewSet(viewsets.ModelViewSet):
     queryset = Article.objects.all()
@@ -15,4 +21,5 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
-
+def index(request):
+  return render(request, 'api/templates/api/index.html')

@@ -1,0 +1,30 @@
+.App {
+  min-height: 100vh;
+  background-color: #282c34;
+  color: white;
+  padding: 20p;
+  
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.hrclass {
+  background-color: red;
+}
+
+/* .mb-3 {
+  margin: 10px;
+} */
+

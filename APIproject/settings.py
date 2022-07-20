@@ -29,8 +29,8 @@ SECRET_KEY = 'sdfkjsrliu345248svdndfosidurg,xv/burt09dfgdfg'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['blog-python-react-django.herokuapp.com' ]
-"""'http://localhost:3000/','127.0.0.1',"""
+ALLOWED_HOSTS = ['blog-python-react-django.herokuapp.com','localhost','127.0.0.1' ]
+"""',"""
 
 # Application definition
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     'api',
+    'webpack_loader',
 ]
 
 
@@ -74,7 +75,7 @@ ROOT_URLCONF = 'APIproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'build')],
+        'DIRS': [os.path.join(BASE_DIR,)],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -140,16 +141,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_URL = "/static/"
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'build/static')]
-STATIC_HOST = os.environ.get("DJANGO_STATIC_HOST", "")
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'build/static')]
+# STATIC_HOST = os.environ.get("DJANGO_STATIC_HOST", "")
 
 # DJANGO_STATIC_HOST
 # https://d4663kmspf1sqa.cloudfront.net
 
-STATICFILES_DIRS = [BASE_DIR, "build"]
+# STATICFILES_DIRS = [BASE_DIR, "build"]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -157,3 +158,10 @@ STATICFILES_DIRS = [BASE_DIR, "build"]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_heroku.settings(locals())
+
+WEBPACK_LOADER = {
+  'DEFAULT': {
+    'BUNDLE_DIR_NAME': 'api/',
+    'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json')
+  }
+}
