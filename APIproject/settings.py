@@ -29,8 +29,8 @@ SECRET_KEY = 'sdfkjsrliu345248svdndfosidurg,xv/burt09dfgdfg'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['http://localhost:3000/','127.0.0.1','blog-python-react-django.herokuapp.com' ]
-
+ALLOWED_HOSTS = ['blog-python-react-django.herokuapp.com' ]
+"""'http://localhost:3000/','127.0.0.1',"""
 
 # Application definition
 
@@ -102,6 +102,10 @@ DATABASES = {
 
 # DATABASES['default'] = dj_database_url.config(conn_max_age=600,
 #                                               ssl_require=True)
+# DATABASE_URL 
+# postgres://ybbkxpkjmoizty:0d9bf31f2cec71dc322a0b8ae15a48590ca26aea743618fc222f58bd9c16aa7e@ec2-34-235-198-25.compute-1.amazonaws.com:5432/d9gse23rlbq5rb
+
+
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
