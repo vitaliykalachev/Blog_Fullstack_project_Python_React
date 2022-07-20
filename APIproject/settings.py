@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['127.0.0.1','blog-python-react-django.herokuapp.com' ]
+ALLOWED_HOSTS = ['http://localhost:3000/','127.0.0.1','blog-python-react-django.herokuapp.com' ]
 
 
 # Application definition
